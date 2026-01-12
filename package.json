@@ -4,6 +4,7 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
+		"prepare": "npm run build",
 		"build": "rimraf dist && tsc && npm run copy-files",
 		"test": "vitest",
 		"copy-files": "cp -r src/data-files dist/data-files",
@@ -11,7 +12,9 @@
 	},
 	"bin": "dist/__main__.js",
 	"files": [
-		"dist"
+		"dist",
+		"src",
+		"tsconfig.json"
 	],
 	"type": "module",
 	"keywords": [],
